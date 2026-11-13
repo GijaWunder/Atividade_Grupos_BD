@@ -59,12 +59,14 @@ INSERT INTO resultados_corrida VALUES
 -- está na sequência das questões
 
 select pilotos.nome, resultados_corrida.pontos
-from resultados_corrida right join pilotos
+from resultados_corrida 
+right join pilotos
 on pilotos.id = resultados_corrida.piloto_id
 where resultados_corrida.gp = 'GP de Interlagos';
 
 select fabricantes_motor.nome, equipes.nome 
-from equipes right join fabricantes_motor
+from equipes 
+right join fabricantes_motor
 on fabricantes_motor.id = equipes.motor_id;
 
 select e.id, e.nome, e.motor_id
